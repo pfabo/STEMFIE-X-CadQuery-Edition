@@ -15,7 +15,7 @@ from lib.hole import Hole_List, Hole
 
 
 
-class BU_Pulley(Stemfie_X):
+class Pulley(Stemfie_X):
     '''
     dt    - 1,2 .. typ kladky 
             1 - mala kladka bez pomocnych dier
@@ -101,7 +101,7 @@ class BU_Pulley(Stemfie_X):
             self.obj = self.obj.edges("|Z").fillet(dt-2)
 
 
-class BU_Pulley_Holder_1(Stemfie_X):
+class Pulley_Holder_1(Stemfie_X):
     '''
     Base - 1 BU Block
     '''
@@ -131,7 +131,7 @@ class BU_Pulley_Holder_1(Stemfie_X):
         self.D(h2)
 
 
-class BU_Pulley_Holder_2(Stemfie_X):
+class Pulley_Holder_2(Stemfie_X):
     '''
     Base - 1 BU Block
     '''
