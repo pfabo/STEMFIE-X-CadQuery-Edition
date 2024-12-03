@@ -10,5 +10,7 @@ The **STEMFIE-X** kit uses the basic principles of the STEMFIE project with modi
 
 When creating models, it is possible to use the connection of elementary components or by combining them, it is possible to create specialized components using the Python program. The designed components can be generated as STL files and printed on a 3D printer using standard procedures. Standard M4 screws and common accessories are used as connecting components.
 
+**Notice** - the library is under development and some class names as well as their functionality may change.
+
 ![demo](./img/demo_01.png)
 ![simple_car](./img/car_01.png)
