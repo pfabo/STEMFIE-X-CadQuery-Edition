@@ -10,7 +10,21 @@ The **STEMFIE-X** kit uses the basic principles of the STEMFIE project with modi
 
 When creating models, it is possible to use the connection of elementary components or by combining them, it is possible to create specialized components using the Python program. The designed components can be generated as STL files and printed on a 3D printer using standard procedures. Standard M4 screws and common accessories are used as connecting components.
 
+## STEMFIE-X Basic Components
+
+* [Basic Components](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0010_cmp_base.ipynb)
 * [Beam Block](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0015_cmp_block.ipynb)
+* [Brace](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0018_cmp_brace.ipynb)
+* [Gears](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0017_cmp_gears.ipynb)
+* [Pulley](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0019_cmp_pulley.ipynb)
+
+## STEMFIE-X Python Programming
+
+* [Programming](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0030_programming.ipynb)
+* [Operations](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0025_operations.ipynb)
+
+## STEMFIE-X Special Edition
+
 * [STEMFIE-X Christmas edition - Create your own cookie cutter](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/9000_ch_form.ipynb)
 
 
