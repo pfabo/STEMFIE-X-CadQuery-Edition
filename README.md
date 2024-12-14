@@ -10,6 +10,8 @@ The **STEMFIE-X** kit uses the basic principles of the STEMFIE project with modi
 
 When creating models, it is possible to use the connection of elementary components or by combining them, it is possible to create specialized components using the Python program. The designed components can be generated as STL files and printed on a 3D printer using standard procedures. Standard M4 screws and common accessories are used as connecting components.
 
+![crane](./img/crane.png)
+
 ## STEMFIE-X Basic Components
 
 * [Basic Components](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0010_cmp_base.ipynb)
