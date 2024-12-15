@@ -1,4 +1,4 @@
-#<font color='navy'> <b> STEMFIE-X-CadQuery-Edition </b></font> 
+# <font color='navy'> <b> STEMFIE-X-CadQuery-Edition </b></font> 
 
 [STEMFIE](https://www.stemfie.org/) is a construction kit for children, authored by [Paulo Kiefe](https://www.stemfie.org/about). The idea of the project is based on the design and 3D printing of universal components and connecting elements and the subsequent construction of own models.
 
