@@ -29,6 +29,7 @@ When creating models, it is possible to use the connection of elementary compone
 ## STEMFIE-X Special Christmas Edition
 
 * [STEMFIE-X Christmas edition - Create your own cookie cutter](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/9000_ch_form.ipynb)
+* [STEMFIE-X Christmas edition - Cookies with a stamp](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/9010_ch_stamp.ipynb)
 
 ![cutter](./img/christmas_special/ch_img_08.png)
 
