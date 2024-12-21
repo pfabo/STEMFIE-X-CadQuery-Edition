@@ -26,13 +26,6 @@ When creating models, it is possible to use the connection of elementary compone
 * [Programming](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0030_programming.ipynb)
 * [Operations](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0025_operations.ipynb)
 
-## STEMFIE-X Special Christmas Edition
-
-* [STEMFIE-X Christmas edition - Create your own cookie cutter](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/9000_ch_form.ipynb)
-* [STEMFIE-X Christmas edition - Cookies with a stamp](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/9010_ch_stamp.ipynb)
-
-![cutter](./img/christmas_special/ch_img_08.png)
-
 **Notice** - the library is under development and some class names as well as their functionality may change.
 
 ![demo](./img/demo_01.png)
