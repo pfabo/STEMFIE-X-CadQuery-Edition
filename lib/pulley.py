@@ -5,22 +5,26 @@ Created on Thu Nov 28 10:03:35 2024
 
 @author: pf
 
-Pulley and Pulley_Holder
+Pulley 
+Pulley_Holder
+Wheel
 
 """
+from numpy import pi, sin, cos
 from lib.base import *
 from lib.components import *
 from lib.beams import *
 from lib.hole import Hole_List, Hole
 
 
-
 class Pulley(Stemfie_X):
     '''
     dt    - 1,2 .. typ kladky 
-            1 - mala kladka bez pomocnych dier
-            2 - kladka s 4 dierami
-            3 - kladka s odlahcenim
+            1   - r = BU     mala kladka bez pomocnych dier
+            1.5 - r = BU*1.5 kladka 4 diery
+            2   - r = BU*2   kladka s 8 dierami
+            2.5 - r = BU*2.5 kladka s 8 dierami
+            3   - r = BU*3   kladka s odlahcenim
     holes - True/False .. vypln kladky dierami
     fill  - True/False .. odlahcenie kladky
     thick - hrubka kladky
@@ -56,10 +60,28 @@ class Pulley(Stemfie_X):
         
         # specifikacia podla priemerov kladiek
         hole_grid = []
-        if dt == 1 or dt==2:
+        if dt == 1 or  dt==1.5 or dt==2:
             hh = Hole(1).BU_Tz(-1/2)
             self.D(hh)
-        
+
+
+        if dt == 1.5:
+            N = 8
+            dp = np.pi*2/N
+            
+            for i in range(N):
+                dx = self.BU*np.cos(dp*i)
+                dy = self.BU*np.sin(dp*i)
+                hole_grid.append([dx,dy])
+                
+            hr = BU_Component()
+            hr.obj = hr.obj.pushPoints(hole_grid) 
+            hr.obj = hr.obj.circle(self.HR)
+            hr.obj = hr.obj.extrude(10)
+            hr.BU_Tz(-1/2)
+            self.D(hr)
+
+
         if dt == 2:
             N = 8
             dp = np.pi*2/N
@@ -75,8 +97,9 @@ class Pulley(Stemfie_X):
             hr.obj = hr.obj.extrude(10)
             hr.BU_Tz(-1/2)
             self.D(hr)
+
         
-        if dt >= 3:
+        if dt >= 2.5:
             # vnutorny kruh
             p3 = BU_Component()
             p3.obj = (p3.obj
@@ -168,3 +191,46 @@ class Pulley_Holder_2(Stemfie_X):
         
         
 #-----------------------------------------------------------------------
+class Wheel(Stemfie_X):
+    def __init__(self, r, h=1/4, d=1/2 ):  
+        Stemfie_X.__init__(self)  
+        
+        if not(r in [1,2]): r=1
+        
+        hole_grid = []
+        if r == 1:
+            cc = BU_Cylinder(r+1/2, h).BU_Tz(h/2)
+            N = 8
+            dp = pi*2/N
+            
+            for i in range(N):
+                dx = self.BU*cos(dp*i) 
+                dy = self.BU*sin(dp*i)
+                hole_grid.append([dx,dy])
+            
+        if r == 2:
+            cc = BU_Cylinder(r+1/2, h).BU_Tz(h/2)
+            N = 8
+            dp = pi*2/N
+            
+            for i in range(N):
+                dx = self.BU*cos(dp*i) 
+                dy = self.BU*sin(dp*i)
+                hole_grid.append([dx,dy])
+            
+            for i in range(N):
+                dx = 2*self.BU*cos(dp*i) 
+                dy = 2*self.BU*sin(dp*i)
+                hole_grid.append([dx,dy])
+                
+        hr = BU_Component()
+        hr.obj = hr.obj.pushPoints(hole_grid) 
+        hr.obj = hr.obj.circle(self.HR)
+        hr.obj = hr.obj.extrude(10*h)
+        cc.D(hr)
+        
+        if d > 0:
+            dd = BU_Cylinder(1/2, d).BU_Tz(h+d/2)
+            cc.U(dd)
+        
+        self.obj = cc.obj

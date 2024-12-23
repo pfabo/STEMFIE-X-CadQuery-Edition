@@ -47,4 +47,63 @@ class Beam_Block(Stemfie_X):
             
         if center == True:
             self.BU_T([-x/2, -y/2, -z/2])
+
             
+class Beam_U_Block(Stemfie_X):
+    def __init__(self, x, y, h1=1/4, h2=1/4):        
+        if h1 < 1/4: h1 = 1/4
+        if h2 < 1/4: h2 = 1/4
+        
+        if h1 > 1/2: h1 = 1/2
+        if h2 > 1/2: h2 = 1/2
+        
+        b1 = Beam_Block([x, y, h1], [False, False, True])
+        b2 = Beam_Block([x, h2, 1], [False, True, False]) 
+        b3 = Beam_Block([x, h2, 1], [False, True, False]).BU_Ty(y-h2)  
+        b1.U([b2, b3])
+        
+        hx = Hole_Grid(x, 1, 1).BU_Txy(1/2,1/2) 
+        b1.D(hx)
+        b1.D(hx.BU_Txy(0,y-1) )
+        
+        hx = Hole_Grid(x, 1, 1).Rx().BU_T([1/2,1,1/2]) 
+        b1.D(hx)
+        b1.D(hx.BU_Ty(y-1))        
+        
+        self.obj = b1.obj
+
+
+
+class Beam_H_Block(Stemfie_X):
+    def __init__(self, x, y, h1=1/4, h2=1/4):        
+        if h1 < 1/4: h1 = 1/4
+        if h2 < 1/4: h2 = 1/4
+        
+        if h1 > 1/2: h1 = 1/2
+        if h2 > 1/2: h2 = 1/2
+        
+        b1 = Beam_Block([x, y, h1], [False, False, True])
+        b2 = Beam_Block([x, h2, 1], [False, True, False]) 
+        b3 = Beam_Block([x, h2, 1], [False, True, False]).BU_Ty(y-h2)  
+        
+        b4 = Beam_Block([y, h2, 1], [False, True, False]).Rz().BU_Tx(h2) 
+        b5 = Beam_Block([y, h2, 1], [False, True, False]).Rz().BU_Tx(h2).BU_Tx(x-h2)
+        b1.U([b2, b3, b4, b5])
+        
+        hx = Hole_Grid(x, 1, 1).BU_Txy(1/2,1/2) 
+        b1.D(hx)
+        b1.D(hx.BU_Txy(0,y-1) )
+        
+        hx = Hole_Grid(x, 1, 1).Rx().BU_T([1/2,1,1/2]) 
+        b1.D(hx)
+        b1.D(hx.BU_Ty(y-1))    
+        
+        hy = Hole_Grid(1, y, 1).BU_T([1/2,1/2,0]) 
+        b1.D(hy)
+        b1.D(hy.BU_Tx(x-1))
+        
+        hy = Hole_Grid(1, y, 1).Ry().BU_T([0,1/2,1/2]) 
+        b1.D(hy)
+        b1.D(hy.BU_Tx(x-1))
+        
+        self.obj = b1.obj

@@ -6,7 +6,7 @@ Created on Mon Nov  4 18:05:31 2024
 @author: pf
 """
 
-import numpy as np
+from numpy import pi,sin,cos,abs
 
 from lib.base import *
 from lib.components import *
@@ -57,35 +57,42 @@ class Brace(Braces):
 class Brace_Arc(Braces):
     
     def __init__(self, r, angle, height=1/4, holes=3, center=False):
+        '''
+        angle - 0...180 deg
+        '''
+
         Braces.__init__(self)
-        alpha = np.abs(angle/180*np.pi)
-        d = self.BU/2
-        r = r*self.BU
+        
+        alpha = abs(angle/180*pi)   # deg -> rad 
+        
+        d = self.BU/2               # brace width
+        r = r*self.BU               # radius
         height = height*self.BU
         
-        if alpha > np.pi:
-            alpha = np.pi
-        beta = np.pi-alpha
-
-        if (alpha >= np.pi/2) and (alpha <= np.pi*3/4):
-            beta = beta-np.pi
+        if alpha > pi:              # angle max  = pi
+            alpha = pi
             
-        if alpha > np.pi/2*3/4:
-            beta = beta-np.pi/2
+        beta = pi-alpha             # end angle
 
-        dx = np.cos(alpha)
-        dy = np.sin(alpha)
-        dx2 = np.cos(alpha/2)
-        dy2 = np.sin(alpha/2)
-        rdx = np.cos(beta)*d
-        rdy = np.sin(beta)*d
+
+        # II kvadrant
+        if (alpha >= pi/2) and (alpha <= pi*3/4):
+            beta = beta-pi
+            
+
+        dx  = cos(alpha)
+        dy  = sin(alpha)
+        dx2 = cos(alpha/2)
+        dy2 = sin(alpha/2)
+        rdx = cos(beta)*d
+        rdy = sin(beta)*d
 
         self.obj = ( #cq.Workplane("XY")
                 self.obj
                .moveTo(r-d, 0)
                .threePointArc( (r, -d), (r+d, 0) )
                .threePointArc( (dx2*(r+d), dy2*(r+d) ), (dx*(r+d), dy*(r+d) ) )
-               .threePointArc((dx*r+rdx, dy*r+rdy), (dx*(r-d), dy*(r-d)) )
+               .threePointArc( (dx*r+rdx, dy*r+rdy), (dx*(r-d), dy*(r-d)) )
                .threePointArc( (dx2*(r-d), dy2*(r-d) ), (r-d, 0 ) )
                .close()
                )
@@ -93,8 +100,8 @@ class Brace_Arc(Braces):
         if holes > 1:
             gamma = alpha / (holes-1)
             for n in range(holes):
-                hx = np.cos(gamma*n)*r
-                hy = np.sin(gamma*n)*r
+                hx = cos(gamma*n)*r
+                hy = sin(gamma*n)*r
                 self.obj = self.obj.moveTo(hx,hy)
                 self.obj = self.obj.circle(self.HR)
                
@@ -124,10 +131,10 @@ class Brace_Circle(Braces):
                 )
         
         if holes > 1:
-            gamma = np.pi*2/ (holes)
+            gamma = pi*2/ (holes)
             for n in range(holes):
-                hx = np.cos(gamma*n)*r
-                hy = np.sin(gamma*n)*r
+                hx = cos(gamma*n)*r
+                hy = sin(gamma*n)*r
                 self.obj = self.obj.moveTo(hx,hy)
                 self.obj = self.obj.circle(self.HR)
                

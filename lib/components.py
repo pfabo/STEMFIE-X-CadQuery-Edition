@@ -20,20 +20,15 @@ class BU_Cube(BU_Component):
     # basic cube
     def __init__(self, dim=[1,1,1], center=True):
         """
-        Parameters
-        ----------
-        dim : list
-            Dimensions of cube in BU units
-        center : bool, optional
-            Position of cube. The default is True.
-
-        Returns
-        -------
-        None.
-
+        BU_Cube([x,y,x])
+        BU_Cube(d)
         """
         BU_Component.__init__(self)
-        x,y,z = np.array(dim)*self.BU
+        if type(dim) == list:
+            x,y,z = np.array(dim)*self.BU
+        else:
+            x = y = z = dim*self.BU
+            
         self.obj = (self.obj).box(x,y,z)
         if center == False:
             self.Tx(x/2).Ty(y/2).Tz(z/2)
@@ -41,9 +36,10 @@ class BU_Cube(BU_Component):
 
 class BU_Cylinder(BU_Component):
     # radius, height in BU units
-    def __init__(self, diameter, height, angle=360, hole=False, center=True):
+    def __init__(self, radius, height, angle=360, hole=True, center=True):
         BU_Component.__init__(self)
-        r = diameter * self.BU/2
+        
+        r = radius * self.BU
         h = height * self.BU
         
         self.obj = (self.obj).cylinder(height=h, radius=r, angle=angle)

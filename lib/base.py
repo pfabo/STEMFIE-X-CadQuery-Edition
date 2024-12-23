@@ -137,11 +137,11 @@ class Stemfie_X():
     #---------------------------------------------------------------------
     
     def Mx(self):
-        self.obj=self.obj.mirror(mirrorPlane="YZ", basePointVector=(0, 0, 0))
+        self.obj=self.obj.mirror(mirrorPlane="XZ", basePointVector=(0, 0, 0))
         return self
     
     def My(self):
-        self.obj=self.obj.mirror(mirrorPlane="XZ", basePointVector=(0, 0, 0))
+        self.obj=self.obj.mirror(mirrorPlane="YZ", basePointVector=(0, 0, 0))
         return self
     
     def Mz(self):
@@ -157,6 +157,12 @@ class Stemfie_X():
     def MKy(self):
         temp = cp.copy(self)
         self.obj=self.obj.mirror(mirrorPlane="YZ", basePointVector=(0, 0, 0))
+        self.U(temp)
+        return self
+        
+    def MKz(self):
+        temp = cp.copy(self)
+        self.obj=self.obj.mirror(mirrorPlane="XY", basePointVector=(0, 0, 0))
         self.U(temp)
         return self
     

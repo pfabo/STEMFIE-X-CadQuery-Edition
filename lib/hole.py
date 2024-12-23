@@ -57,12 +57,14 @@ class Hole_Slot(Holes):
     
         def __init__(self, size, height=1/4, center=False):
             Holes.__init__(self, height)
-            if size > 1:
-                bs = (
-                    cq.Sketch()
-                    .arc( (                0, 0), self.HR, 0.0, 360.0)
-                    .arc( ( (size-1)*self.BU, 0), self.HR, 0.0, 360.0)
-                    .hull()
-                )
-                self.obj = self.obj.placeSketch(bs)
-                self.obj = self.obj.extrude(self.length)
+            if size < 2:
+                size = 2
+                
+            bs = (
+                cq.Sketch()
+                .arc( (                0, 0), self.HR, 0.0, 360.0)
+                .arc( ( (size-1)*self.BU, 0), self.HR, 0.0, 360.0)
+                .hull()
+            )
+            self.obj = self.obj.placeSketch(bs)
+            self.obj = self.obj.extrude(self.length)
