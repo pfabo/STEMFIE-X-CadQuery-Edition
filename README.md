@@ -29,4 +29,14 @@ When creating models, it is possible to use the connection of elementary compone
 **Notice** - the library is under development and some class names as well as their functionality may change.
 
 ![demo](./img/demo_01.png)
+
+## Update 241223
+
+New Beam_U_Block() and Beam_H_Block() components.
+![demo](./img/comp_1.png)
+![demo](./img/comp_2.png)
+![demo](./img/comp_3.png)
+
+## Examples
+
 ![simple_car](./img/car_01.png)
