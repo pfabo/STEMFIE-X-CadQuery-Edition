@@ -10,7 +10,7 @@ The **STEMFIE-X** kit uses the basic principles of the STEMFIE project with modi
 
 When creating models, it is possible to use the connection of elementary components or by combining them, it is possible to create specialized components using the Python program. The designed components can be generated as STL files and printed on a 3D printer using standard procedures. Standard M4 screws and common accessories are used as connecting components.
 
-![crane](./img/crane.jpg)
+
 
 ## STEMFIE-X Basic Components
 
@@ -28,15 +28,25 @@ When creating models, it is possible to use the connection of elementary compone
 
 **Notice** - the library is under development and some class names as well as their functionality may change.
 
-![demo](./img/demo_01.png)
+<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/demo_01.png" width="600px"> 
 
 ## Update 241223
 
-New Beam_U_Block() and Beam_H_Block() components.
-![demo](./img/comp_1.png)
-![demo](./img/comp_2.png)
-![demo](./img/comp_3.png)
+New components in the library - Beam_U_Block() and Beam_H_Block().
+
+<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/comp_1.png" width="200px"> 
+<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/comp_2.png" width="200px"> 
+<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/comp_3.png" width="200px"> 
+
+## Update 241222
+
+A small hand-powered windmill for the youngest constructors
+
+<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/simple_windmill.jpg" width="300px">
+
 
 ## Examples
 
-![simple_car](./img/car_01.png)
+<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/car_01.png" width="600px"> 
+<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/crane.jpg" width="600px">
+
