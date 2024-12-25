@@ -69,31 +69,44 @@ class Brace_Arc(Braces):
         r = r*self.BU               # radius
         height = height*self.BU
         
-        if alpha > pi:              # angle max  = pi
+        if alpha >= pi:              # angle max  = pi
             alpha = pi
-            
-        beta = pi-alpha             # end angle
-
-
+        
+        # I.kvadrant
+        beta = pi/2+alpha             # end angle
+        
         # II kvadrant
-        if (alpha >= pi/2) and (alpha <= pi*3/4):
-            beta = beta-pi
-            
+        if (alpha > pi/2) and (alpha <= pi*3/4):
+            beta = -alpha
+        
+        if alpha > pi*3/4:
+            beta = -(alpha-pi/2)
 
         dx  = cos(alpha)
         dy  = sin(alpha)
+        
         dx2 = cos(alpha/2)
         dy2 = sin(alpha/2)
+        
         rdx = cos(beta)*d
         rdy = sin(beta)*d
 
         self.obj = ( #cq.Workplane("XY")
                 self.obj
                .moveTo(r-d, 0)
+                
+                # pociatocny obluk
                .threePointArc( (r, -d), (r+d, 0) )
+                
+                # vonkajsi obluk
                .threePointArc( (dx2*(r+d), dy2*(r+d) ), (dx*(r+d), dy*(r+d) ) )
+                
+                # koncovy obluk
                .threePointArc( (dx*r+rdx, dy*r+rdy), (dx*(r-d), dy*(r-d)) )
+                
+                # vnutorny obluk
                .threePointArc( (dx2*(r-d), dy2*(r-d) ), (r-d, 0 ) )
+            
                .close()
                )
         
@@ -108,12 +121,12 @@ class Brace_Arc(Braces):
         self.obj = self.obj.extrude(height)
         
         if center==True:
-            self.BU_Tz(-height/2)
+            self.Tz(-height/2)
             
 
 class Brace_Circle(Braces): 
     
-    def __init__(self, r, height=1/4, holes=3, center=False):
+    def __init__(self, r, height=1/4, holes=4, center=False):
         Braces.__init__(self)
         if r<1: r = 1
         if holes < 1: holes = 1
