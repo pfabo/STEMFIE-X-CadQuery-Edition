@@ -20,6 +20,7 @@ When creating models, it is possible to use the connection of elementary compone
 * [Brace](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0018_cmp_brace.ipynb)
 * [Gears](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0017_cmp_gears.ipynb)
 * [Pulley](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0019_cmp_pulley.ipynb)
+* [Component Joints](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0024_cmp_connections.ipynb)
 
 ## STEMFIE-X Python Programming
 
