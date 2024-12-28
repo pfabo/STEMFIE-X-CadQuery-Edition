@@ -45,15 +45,14 @@ class Construct():
         self.obj.add(cmp.obj, color=cq.Color(color), loc=cq.Location(cq.Vector(x, y, z)) )
     
     
-    def toStep(self):
-        self.obj.save(self.name +'.step')
-        #cq.exporters.export(self.obj, self.name +'.step')
+    def export_step(self):
+        cq.exporters.export(self.obj, self.name +'.step')
         
-    def toStl(self):
-        self.obj.save(self.name +'.stl')
+    def export_stl(self):
+        cq.exporters.export(self.obj, self.name +'.stl')
         
     def display(self):
-        # display object in Jupyter
+        # display object in Jupyter Notebook
         display(self.obj)
         
     

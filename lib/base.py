@@ -170,17 +170,19 @@ class Stemfie_X():
     # utils
     #---------------------------------------------------------------------
     
-    #def show(self):
-    #    show_object(self.obj)
-        
-    #def debug(self):
-    #    debug(self.obj)
-    
     def copy(self):
         return cp.copy(self)
+    
+    def export_stl(self, file_name):
+        if file_name.endswith('.stl') == False: 
+            file_name = file_name + '.stl'
+        self.obj.export(file_name)
         
-    def display(self):
-        # display object in Jupyter
-        display(self.obj)
+    def export_step(self, file_name):
+        if file_name.endswith('.step') == False: 
+            file_name = file_name + '.step'
+        self.obj.export(file_name)
+    
+
         
 

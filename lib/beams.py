@@ -71,6 +71,24 @@ class Beam_U_Block(Stemfie_X):
         b1.D(hx.BU_Ty(y-1))        
         
         self.obj = b1.obj
+        
+class Beam_L_Block(Stemfie_X):
+    def __init__(self, x, y, h1=1/4, h2=1/4):        
+        if h1 < 1/4: h1 = 1/4
+        if h2 < 1/4: h2 = 1/4
+        
+        if h1 > 1/2: h1 = 1/2
+        if h2 > 1/2: h2 = 1/2
+        
+        b1 = Beam_Block([x, y, h1], [False, False, True])
+        b2 = Beam_Block([x, h2, 1], [False, True, False])  
+        b1.U(b2)
+        
+        hx = Hole_Grid(x, 1, 1).BU_Txy(1/2,1/2) 
+        b1.D(hx)
+        b1.D(hx.BU_Txy(0,y-1) )
+              
+        self.obj = b1.obj
 
 
 
