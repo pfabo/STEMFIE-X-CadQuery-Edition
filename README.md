@@ -31,6 +31,12 @@ When creating models, it is possible to use the connection of elementary compone
 
 <img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/demo_01.png" width="600px"> 
 
+## Update 241228
+
+New parametric wheels in ./lib/pulley.py library
+
+<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/demo/wheels.png" width="600px"> 
+
 ## Update 241223
 
 New components in the library - Beam_U_Block() and Beam_H_Block().
