@@ -5,7 +5,7 @@ Created on Mon Nov  4 17:58:15 2024
 
 @author: pf
 
-Base Stemfie-X class
+Basic components in BU units,
 """
 
 from lib.base import *

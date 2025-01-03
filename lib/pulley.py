@@ -19,7 +19,7 @@ from lib.hole import Hole_List, Hole
 
 class Pulley(Stemfie_X):
     '''
-    dt    - 1,2 .. typ kladky 
+    dt    - 1,2, 2.5, 3 .. typ kladky 
             1   - r = BU     mala kladka bez pomocnych dier
             1.5 - r = BU*1.5 kladka 4 diery
             2   - r = BU*2   kladka s 8 dierami
@@ -30,14 +30,14 @@ class Pulley(Stemfie_X):
     thick - hrubka kladky
     
     '''
-    def __init__(self, dt, holes=True, fill=False, thick=0.8, beams=3):
+    def __init__(self, dt, thick=1, holes=True, fill=False, beams=3):
         Stemfie_X.__init__(self)  
         
         if dt<1: dt = 1
         
         d1 = dt*self.BU - 0.5
         d2 = d1-2.5
-        h  = thick*self.BU
+        h  = thick*self.BU - 0.05*self.BU
         
         p1 = BU_Component()
         p1.obj = (p1.obj
@@ -227,7 +227,8 @@ class Wheel(Stemfie_X):
             hr = BU_Component()
             hr.obj = hr.obj.pushPoints(hole_grid) 
             hr.obj = hr.obj.circle(self.HR)
-            hr.obj = hr.obj.extrude(10*h)
+            hr.obj = hr.obj.extrude(self.BU*h)
+            hr.obj = hr.obj.translate([0,0,-h/2*self.BU])
             w1.D(hr)
             
         if r==3:

@@ -5,17 +5,16 @@ Created on Mon Nov  4 18:37:59 2024
 
 @author: pf
 """
-from lib.base import Stemfie_X, np
+from lib.base import Stemfie_X, np, Stemfie_X_Base
 import cadquery as cq
 
-class Construct():
+class Construct(Stemfie_X_Base):
     """
     Simplified version of the cq.Assembly class
     """
     
-    BU = Stemfie_X.BU
-    
     def __init__(self, name):
+        Stemfie_X_Base.__init__(self)
         self.name = name
         self.obj = cq.Assembly(loc=cq.Location(cq.Vector(0, 0, 0)) )
         

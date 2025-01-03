@@ -14,13 +14,22 @@ import copy as cp
 import cadquery as cq
 from cadquery import exporters
 
+BU = 10     # Basic Unit
+HR = 2      # Hole Radius
 
-class Stemfie_X():
-    BU = 10     # Basic Unit
-    HR = 2      # Hole Radius
-    
-    def __init__(self): #, workplane):
+
+class Stemfie_X_Base():
+    def __init__(self): 
+        self.BU = BU 
+        self.HR = HR 
+
+
+class Stemfie_X(Stemfie_X_Base):
+
+    def __init__(self): 
+        Stemfie_X_Base.__init__(self)
         self.obj = cq.Workplane("XY" , origin=(0,0,0))
+        
 
     #---------------------------------------------------------------------
     # translate operations
