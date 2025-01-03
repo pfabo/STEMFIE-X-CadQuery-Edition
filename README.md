@@ -31,6 +31,12 @@ When creating models, it is possible to use the connection of elementary compone
 
 <img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/demo_01.png" width="600px"> 
 
+## Update 250103
+
+[Small crane example](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0110_ex_simple_crane.ipynb)
+
+<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/examples/crane_01.jpg" width="600px"> 
+
 ## Update 241228
 
 New parametric wheels in ./lib/pulley.py library
