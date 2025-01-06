@@ -270,8 +270,6 @@ class Wheel(Stemfie_X):
             
             w1.obj = w1.obj.edges("|Z").fillet(dt-2)
 
-     
-
         w1.BU_Tz(h/2)
         
         if d > 0:

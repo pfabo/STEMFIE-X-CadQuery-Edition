@@ -7,3 +7,4 @@ from .construct import *
 from .utils import *
 from .construct import *
 from .pulley import *
+from .motor import *
