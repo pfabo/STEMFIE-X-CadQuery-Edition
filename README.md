@@ -33,6 +33,7 @@ When creating models, it is possible to use the connection of elementary compone
 
 ## Update 250126
 [Linear Servo](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0112_ex_linear_servo.ipynb)
+
 <img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/examples/servo_01.jpg" width="600px"> 
 
 ## Update 250103
