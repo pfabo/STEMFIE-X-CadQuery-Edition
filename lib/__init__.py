@@ -8,3 +8,6 @@ from .utils import *
 from .construct import *
 from .pulley import *
 from .motor import *
+from .gears import *
+from .servo import *
+from .wheels import *

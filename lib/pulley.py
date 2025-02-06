@@ -7,8 +7,6 @@ Created on Thu Nov 28 10:03:35 2024
 
 Pulley 
 Pulley_Holder
-Wheel
-
 """
 from numpy import pi, sin, cos
 from lib.base import *
@@ -39,6 +37,7 @@ class Pulley(Stemfie_X):
         d2 = d1-2.5
         h  = thick*self.BU - 0.05*self.BU
         
+        # lava a prava strana kladky
         p1 = BU_Component()
         p1.obj = (p1.obj
             .circle(d1)
@@ -109,10 +108,13 @@ class Pulley(Stemfie_X):
             )
             self.D(p3) 
             
+            # hrubka lucov rovnaka ako hrubka kladky
+            thick = h / self.BU
+            
             if beams==3:
-                b1 = Beam_Block([dt+dt-1,1,thick], holes = [False,False, True], center=True)
-                b2 = Beam_Block([dt+dt-1,1,thick], holes = [False,False, True], center=True).Rz(-60)
-                b3 = Beam_Block([dt+dt-1,1,thick], holes = [False,False, True], center=True).Rz( 60)
+                b1 = Beam_Block([dt+dt-1, 1, thick], holes = [False,False, True], center=True)
+                b2 = Beam_Block([dt+dt-1, 1, thick], holes = [False,False, True], center=True).Rz(-60)
+                b3 = Beam_Block([dt+dt-1, 1, thick], holes = [False,False, True], center=True).Rz( 60)
                 self.U([b1, b2, b3])
             else:
                 b1 = Beam_Block([dt+dt-1,1,thick], holes = [False,False, True], center=True)
@@ -190,90 +192,3 @@ class Pulley_Holder_2(Stemfie_X):
         self.D(h2)
         
         
-#-----------------------------------------------------------------------
-class Wheel(Stemfie_X):
-    def __init__(self, r, h=1/4, d=1/2, beams=3 ):  
-        Stemfie_X.__init__(self)  
-        
-        if not(r in [1,2,3]): r=1
-        hole_grid = []
-        
-        if r == 1:
-            w1 = BU_Cylinder(r+1/2, h)
-            N = 8
-            dp = pi*2/N
-            
-            for i in range(N):
-                dx = self.BU*cos(dp*i) 
-                dy = self.BU*sin(dp*i)
-                hole_grid.append([dx,dy])
-            
-        if r == 2:
-            w1 = BU_Cylinder(r+1/2, h)
-            N = 8
-            dp = pi*2/N
-            
-            for i in range(N):
-                dx = self.BU*cos(dp*i) 
-                dy = self.BU*sin(dp*i)
-                hole_grid.append([dx,dy])
-            
-            for i in range(N):
-                dx = 2*self.BU*cos(dp*i) 
-                dy = 2*self.BU*sin(dp*i)
-                hole_grid.append([dx,dy])
-        
-        if r in [1,2]:
-            hr = BU_Component()
-            hr.obj = hr.obj.pushPoints(hole_grid) 
-            hr.obj = hr.obj.circle(self.HR)
-            hr.obj = hr.obj.extrude(self.BU*h)
-            hr.obj = hr.obj.translate([0,0,-h/2*self.BU])
-            w1.D(hr)
-            
-        if r==3:
-            w1 = BU_Cylinder(r+1/2, h)
-            
-            c2 = BU_Cylinder(r, h)
-            w1.D(c2)
-            
-            dt = r+1-1/4
-            if beams==3:
-                b1 = Beam_Block([dt+dt-1,1,h], holes = [False,False,False], center=True)
-                b2 = Beam_Block([dt+dt-1,1,h], holes = [False,False,False], center=True).Rz(-60)
-                b3 = Beam_Block([dt+dt-1,1,h], holes = [False,False,False], center=True).Rz( 60)
-                w1.U([b1, b2, b3])
-                      
-            else:
-                b1 = Beam_Block([dt+dt-1,1,h], holes = [False,False,False], center=True)
-                b2 = Beam_Block([dt+dt-1,1,h], holes = [False,False,False], center=True).Rz()
-                b3 = Beam_Block([dt+dt-1,1,h], holes = [False,False,False], center=True).Rz( 45)
-                b4 = Beam_Block([dt+dt-1,1,h], holes = [False,False,False], center=True).Rz(-45)
-                w1.U([b1, b2, b3, b4])
-   
-                
-            N = 2*beams
-            dp = pi*2/N
-            hole_grid.append([0,0])
-            for j in range(1,4):
-                for i in range(N):
-                    dx = self.BU*j*cos(dp*i) 
-                    dy = self.BU*j*sin(dp*i)
-                    hole_grid.append([dx,dy])
-                
-            hr = BU_Component()
-            hr.obj = hr.obj.pushPoints(hole_grid) 
-            hr.obj = hr.obj.circle(self.HR)
-            hr.obj = hr.obj.extrude(self.BU*h)
-            hr.obj = hr.obj.translate([0,0,-h/2*self.BU])
-            w1.D(hr)
-            
-            w1.obj = w1.obj.edges("|Z").fillet(dt-2)
-
-        w1.BU_Tz(h/2)
-        
-        if d > 0:
-            dd = BU_Cylinder(1/2, d).BU_Tz(h+d/2)
-            w1.U(dd)
-        
-        self.obj = w1.obj
