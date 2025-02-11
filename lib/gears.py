@@ -19,7 +19,7 @@ from numpy import array
 
 class Spur_Gear(Stemfie_X):
     
-    def __init__(self, teeth_number=20, width=1/2, bore=HR):
+    def __init__(self, teeth_number=20, width=1/2, bore=HR*2):
         Stemfie_X.__init__(self)  
         module=1.0
         spur_gear = SpurGear(module, teeth_number, width=self.BU*width, bore_d=bore)

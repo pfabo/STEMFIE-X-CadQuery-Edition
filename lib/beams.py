@@ -50,16 +50,16 @@ class Beam_Block(Stemfie_X):
 
             
 class Beam_U_Block(Stemfie_X):
-    def __init__(self, x, y, h1=1/4, h2=1/4):        
-        if h1 < 1/4: h1 = 1/4
-        if h2 < 1/4: h2 = 1/4
+    def __init__(self, x, y, hx=1/4, hy=1/4):        
+        if hx < 1/4: hx = 1/4
+        if hy < 1/4: hy = 1/4
         
-        if h1 > 1/2: h1 = 1/2
-        if h2 > 1/2: h2 = 1/2
+        if hx > 1/2: hx = 1/2
+        if hy > 1/2: hy = 1/2
         
-        b1 = Beam_Block([x, y, h1], [False, False, True])
-        b2 = Beam_Block([x, h2, 1], [False, True, False]) 
-        b3 = Beam_Block([x, h2, 1], [False, True, False]).BU_Ty(y-h2)  
+        b1 = Beam_Block([x, y, hx], [False, False, True])
+        b2 = Beam_Block([x, hy, 1], [False, True, False]) 
+        b3 = Beam_Block([x, hy, 1], [False, True, False]).BU_Ty(y-hy)  
         b1.U([b2, b3])
         
         hx = Hole_Grid(x, 1, 1).BU_Txy(1/2,1/2) 
@@ -73,39 +73,41 @@ class Beam_U_Block(Stemfie_X):
         self.obj = b1.obj
         
 class Beam_L_Block(Stemfie_X):
-    def __init__(self, x, y, h1=1/4, h2=1/4):        
-        if h1 < 1/4: h1 = 1/4
-        if h2 < 1/4: h2 = 1/4
+    def __init__(self, x, y, hx=1/4, hy=1/4):        
+        if hx < 1/4: hx = 1/4
+        if hy < 1/4: hy = 1/4
         
-        if h1 > 1/2: h1 = 1/2
-        if h2 > 1/2: h2 = 1/2
+        if hx > 1/2: hx = 1/2
+        if hy > 1/2: hy = 1/2
         
-        b1 = Beam_Block([x, y, h1], [False, False, True])
-        b2 = Beam_Block([x, h2, 1], [False, True, False])  
+        b1 = Beam_Block([x, y, hx], [False, False, False])
+        b2 = Beam_Block([x, hy, 1], [False, False, False])  
         b1.U(b2)
         
-        hx = Hole_Grid(x, 1, 1).BU_Txy(1/2,1/2) 
+        hx = Hole_Grid(x, y, 1).BU_Txy(1/2,1/2) 
         b1.D(hx)
-        b1.D(hx.BU_Txy(0,y-1) )
+        
+        hz = Hole_Grid(x, 1, 1).BU_Txy(1/2,1/2) 
+        b1.D(hz.Rx().BU_Txy(0,1) )
               
         self.obj = b1.obj
 
 
 
 class Beam_H_Block(Stemfie_X):
-    def __init__(self, x, y, h1=1/4, h2=1/4):        
-        if h1 < 1/4: h1 = 1/4
-        if h2 < 1/4: h2 = 1/4
+    def __init__(self, x, y, hx=1/4, hy=1/4):        
+        if hx < 1/4: hx = 1/4
+        if hy < 1/4: hy = 1/4
         
-        if h1 > 1/2: h1 = 1/2
-        if h2 > 1/2: h2 = 1/2
+        if hx > 1/2: hx = 1/2
+        if hy > 1/2: hy = 1/2
         
-        b1 = Beam_Block([x, y, h1], [False, False, True])
-        b2 = Beam_Block([x, h2, 1], [False, True, False]) 
-        b3 = Beam_Block([x, h2, 1], [False, True, False]).BU_Ty(y-h2)  
+        b1 = Beam_Block([x, y, hx], [False, False, True])
+        b2 = Beam_Block([x, hy, 1], [False, True, False]) 
+        b3 = Beam_Block([x, hy, 1], [False, True, False]).BU_Ty(y-hy)  
         
-        b4 = Beam_Block([y, h2, 1], [False, True, False]).Rz().BU_Tx(h2) 
-        b5 = Beam_Block([y, h2, 1], [False, True, False]).Rz().BU_Tx(h2).BU_Tx(x-h2)
+        b4 = Beam_Block([y, hy, 1], [False, True, False]).Rz().BU_Tx(hy) 
+        b5 = Beam_Block([y, hy, 1], [False, True, False]).Rz().BU_Tx(hy).BU_Tx(x-hy)
         b1.U([b2, b3, b4, b5])
         
         hx = Hole_Grid(x, 1, 1).BU_Txy(1/2,1/2) 

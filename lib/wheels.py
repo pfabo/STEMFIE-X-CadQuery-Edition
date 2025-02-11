@@ -51,7 +51,7 @@ class Wheel(Stemfie_X):
         w1.BU_Tz(self.h/2)
        
         # upevnenie osi
-        dd = BU_Cylinder(1, self.d).BU_Tz(self.h+self.d/2)
+        dd = BU_Cylinder(1, self.d).BU_Tz(self.h/2 + self.d / 2)
         w1.U(dd)
         self.obj = w1.obj
         
@@ -80,6 +80,11 @@ class Wheel(Stemfie_X):
         hr.obj = hr.obj.extrude(self.BU * self.h)
         hr.obj = hr.obj.translate([0,0,-self.h/2*self.BU])
         w1.D(hr)
+        
+        w1.BU_Tz(self.h/2)
+        dd = BU_Cylinder(1, self.d).BU_Tz(self.h+self.d/2)
+        w1.U(dd)
+        self.obj = w1.obj
         
         
     def wheel_3(self):
@@ -122,50 +127,6 @@ class Wheel(Stemfie_X):
         else:
             ff = 2
         w1.obj = w1.obj.edges("|Z").fillet(ff)
-        
-        
-        ''' 
-        
-        if r==3:
-            w1 = BU_Cylinder(r+1/2, h)
-            
-            c2 = BU_Cylinder(r, h)
-            w1.D(c2)
-            
-            dt = r+1-1/4
-            if beams==3:
-                b1 = Beam_Block([dt+dt-1,1,h], holes = [False,False,False], center=True)
-                b2 = Beam_Block([dt+dt-1,1,h], holes = [False,False,False], center=True).Rz(-60)
-                b3 = Beam_Block([dt+dt-1,1,h], holes = [False,False,False], center=True).Rz( 60)
-                w1.U([b1, b2, b3])
-                      
-            else:
-                b1 = Beam_Block([dt+dt-1,1,h], holes = [False,False,False], center=True)
-                b2 = Beam_Block([dt+dt-1,1,h], holes = [False,False,False], center=True).Rz()
-                b3 = Beam_Block([dt+dt-1,1,h], holes = [False,False,False], center=True).Rz( 45)
-                b4 = Beam_Block([dt+dt-1,1,h], holes = [False,False,False], center=True).Rz(-45)
-                w1.U([b1, b2, b3, b4])
-   
-                
-            N = 2*beams
-            dp = pi*2/N
-            hole_grid.append([0,0])
-            for j in range(1,4):
-                for i in range(N):
-                    dx = self.BU*j*cos(dp*i) 
-                    dy = self.BU*j*sin(dp*i)
-                    hole_grid.append([dx,dy])
-                
-            hr = BU_Component()
-            hr.obj = hr.obj.pushPoints(hole_grid) 
-            hr.obj = hr.obj.circle(self.HR)
-            hr.obj = hr.obj.extrude(self.BU*h)
-            hr.obj = hr.obj.translate([0,0,-h/2*self.BU])
-            w1.D(hr)
-            
-            w1.obj = w1.obj.edges("|Z").fillet(dt-2)
-        '''
-        
         
         w1.BU_Tz(self.h/2)
        

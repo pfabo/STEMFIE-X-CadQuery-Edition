@@ -44,7 +44,7 @@ class Brace(Braces):
                 self.BU_Tx( -(size-1)/2 ).BU_Tz(-height/2)
                 
         else:
-            self.obj = BU_Cylinder(1/2, height).obj
+            self.obj = BU_Cylinder(1, height).obj
             self.BU_Tz(height/2)
             
             if holes==True:

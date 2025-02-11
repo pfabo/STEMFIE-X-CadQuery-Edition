@@ -37,18 +37,18 @@ class Construct(Stemfie_X_Base):
         Returns
         -------
         None.
-
         """
         x,y,z = np.array(loc)*self.BU
-        #self.obj.add(cmp.obj, loc=cq.Location(cq.Vector(x, y, z), tuple(angle) ), color=cq.Color(color) )
         self.obj.add(cmp.obj, color=cq.Color(color), loc=cq.Location(cq.Vector(x, y, z)) )
     
     
     def export_step(self):
-        cq.exporters.export(self.obj, self.name +'.step')
+        self.obj.export(self.name +'.step')
+        
         
     def export_stl(self):
-        cq.exporters.export(self.obj, self.name +'.stl')
+        self.obj.export(self.name +'.stl')
+        
         
     def display(self):
         # display object in Jupyter Notebook
