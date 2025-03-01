@@ -23,7 +23,11 @@ When creating models, it is possible to use the connection of elementary compone
 * [Gears](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0017_cmp_gears.ipynb)
 * [Pulleys](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0022_cmp_pulley.ipynb)
 * [Wheels](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0021_cmp_wheel.ipynb)
+* [Fences](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0032_cmp_fences.ipynb)
+  
 * [Component Joints](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0024_cmp_connections.ipynb)
+* [Block Couplers](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0034_cmp_couplers.ipynb)
+* [Triangle Couplers](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0035_cmp_triangle.ipynb)
 
 ## STEMFIE-X Python Programming
 
