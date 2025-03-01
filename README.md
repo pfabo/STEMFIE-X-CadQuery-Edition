@@ -40,7 +40,7 @@ When creating models, it is possible to use the connection of elementary compone
 * [Small Car](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0200_ex_small_car.ipynb)
 * [Small Windmill](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0205_ex_simple_windmill.ipynb)
 * [Linear Servo](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0212_ex_linear_servo.ipynb)
-* [Small Crane Servo](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0210_ex_simple_crane.ipynb)
+* [Small Crane](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0210_ex_simple_crane.ipynb)
 * [Big Windmill](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0214_ex_big_windmill.ipynb)
 
 <img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/img/banner_02.png" width="800px"> 
