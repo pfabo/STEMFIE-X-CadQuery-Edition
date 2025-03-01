@@ -1,5 +1,7 @@
 # STEMFIE-X-CadQuery-Edition 
 
+<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/img/banner_02.png" width="800px"> 
+
 [STEMFIE](https://www.stemfie.org/) is a construction kit for children, authored by [Paulo Kiefe](https://www.stemfie.org/about). The idea of the project is based on the design and 3D printing of universal components and connecting elements and the subsequent construction of own models.
 
 For the parametric design of kit components (beams, braces ...) of various shapes and sizes [Brendon Collecutt](https://github.com/Cantareus/Stemfie_OpenSCAD/blob/main/docs/stemfie.scad.md) created a parametric library for openSCAD program. Other graphic programs and design CAD systems such as FreeCAD, Blender, and Tinkercad can also be used to design and construct models.
@@ -16,16 +18,16 @@ When creating models, it is possible to use the connection of elementary compone
 
 * [Library installation](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0005_install.ipynb)
 * [Basic Components](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0010_cmp_base.ipynb)
-* [Beam Block](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0015_cmp_block.ipynb)
-* [Brace](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0018_cmp_brace.ipynb)
-* [Gears](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0017_cmp_gears.ipynb)
-* [Pulley](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0019_cmp_pulley.ipynb)
-* [Component Joints](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0024_cmp_connections.ipynb)
+* [Beam Block](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0015_cmp_block.ipynb)
+* [Brace](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0018_cmp_brace.ipynb)
+* [Gears](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0017_cmp_gears.ipynb)
+* [Pulley](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0022_cmp_pulley.ipynb)
+* [Component Joints](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0024_cmp_connections.ipynb)
 
 ## STEMFIE-X Python Programming
 
-* [Programming](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0030_programming.ipynb)
-* [Operations](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0025_operations.ipynb)
+* [Programming](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0150_prg_base.ipynb)
+* [Operations](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0155_operations.ipynb)
 
 **Notice** - the library is under development and some class names as well as their functionality may change.
 
