@@ -12,7 +12,7 @@ The **STEMFIE-X** kit uses the basic principles of the STEMFIE project with modi
 
 When creating models, it is possible to use the connection of elementary components or by combining them, it is possible to create specialized components using the Python program. The designed components can be generated as STL files and printed on a 3D printer using standard procedures. Standard M4 screws and common accessories are used as connecting components.
 
-
+<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/img/demo_01.png" width="600px"> 
 
 ## STEMFIE-X Basic Components
 
@@ -21,52 +21,17 @@ When creating models, it is possible to use the connection of elementary compone
 * [Beam Block](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0015_cmp_block.ipynb)
 * [Brace](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0018_cmp_brace.ipynb)
 * [Gears](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0017_cmp_gears.ipynb)
-* [Pulley](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0022_cmp_pulley.ipynb)
+* [Pulleys](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0022_cmp_pulley.ipynb)
+* [Wheels](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0021_cmp_wheel.ipynb)
 * [Component Joints](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0024_cmp_connections.ipynb)
 
 ## STEMFIE-X Python Programming
 
 * [Programming](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0150_prg_base.ipynb)
-* [Operations](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0155_operations.ipynb)
+* [Operations](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0155_prg_operations.ipynb)
 
 **Notice** - the library is under development and some class names as well as their functionality may change.
 
-<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/demo_01.png" width="600px"> 
+## STEMFIE-X Examples
 
-## Update 250126
-[Linear Servo](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0112_ex_linear_servo.ipynb)
-
-<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/examples/servo_01.jpg" width="600px"> 
-
-## Update 250103
-
-[Small crane example](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0110_ex_simple_crane.ipynb)
-
-<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/examples/crane_01.jpg" width="600px"> 
-
-## Update 241228
-
-New parametric wheels in ./lib/pulley.py library
-
-<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/demo/wheels.png" width="600px"> 
-
-## Update 241223
-
-New components in the library - Beam_U_Block() and Beam_H_Block().
-
-<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/comp_1.png" width="200px"> 
-<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/comp_2.png" width="200px"> 
-<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/comp_3.png" width="200px"> 
-
-## Update 241222
-
-A small hand-powered windmill for the youngest constructors
-
-<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/simple_windmill.jpg" width="300px">
-
-
-## Examples
-
-<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/car_01.png" width="600px"> 
-<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/img/crane.jpg" width="600px">
-
+<img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/img/banner_02.png" width="800px"> 
