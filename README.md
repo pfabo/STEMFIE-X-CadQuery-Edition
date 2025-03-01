@@ -14,7 +14,7 @@ When creating models, it is possible to use the connection of elementary compone
 
 <img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/img/demo_01.png" width="600px"> 
 
-## STEMFIE-X Basic Components
+## Basic Components
 
 * [Library installation](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0005_install.ipynb)
 * [Basic Components](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0010_cmp_base.ipynb)
@@ -24,18 +24,22 @@ When creating models, it is possible to use the connection of elementary compone
 * [Pulleys](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0022_cmp_pulley.ipynb)
 * [Wheels](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0021_cmp_wheel.ipynb)
 * [Fences](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0032_cmp_fences.ipynb)
-  
 * [Component Joints](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0024_cmp_connections.ipynb)
 * [Block Couplers](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0034_cmp_couplers.ipynb)
 * [Triangle Couplers](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0035_cmp_triangle.ipynb)
 
-## STEMFIE-X Python Programming
+## Python Programming
 
 * [Programming](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0150_prg_base.ipynb)
 * [Operations](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0155_prg_operations.ipynb)
 
 **Notice** - the library is under development and some class names as well as their functionality may change.
 
-## STEMFIE-X Examples
+## Examples
+
+* [Small Car](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0200_ex_small_car.ipynb)
+* [Small Windmill](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0210_ex_simple_windmill.ipynb)
+* [Linear Servo](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0212_ex_simple_linear_servo.ipynb)
+* [Big Windmill](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0214_ex_big_windmill.ipynb)
 
 <img src ="https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/img/banner_02.png" width="800px"> 
