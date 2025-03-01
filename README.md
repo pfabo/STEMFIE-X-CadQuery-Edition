@@ -14,8 +14,8 @@ When creating models, it is possible to use the connection of elementary compone
 
 ## STEMFIE-X Basic Components
 
-* [Library installation](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebook/0005_install.ipynb)
-* [Basic Components](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebook/0010_cmp_base.ipynb)
+* [Library installation](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0005_install.ipynb)
+* [Basic Components](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/notebooks/0010_cmp_base.ipynb)
 * [Beam Block](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0015_cmp_block.ipynb)
 * [Brace](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0018_cmp_brace.ipynb)
 * [Gears](https://github.com/pfabo/STEMFIE-X-CadQuery-Edition/blob/main/0017_cmp_gears.ipynb)
